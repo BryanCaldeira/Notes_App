@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sem4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/sems.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <p class="navbar-brand" id="brand">CS Notes</p>
+        </div>
+      </div>
+    </nav>
+    <script type="text/javascript">
+      setTimeout(function(){
+        if ($('#distag').length > 0) {
+             $('#distag').remove();
+            }
+        }, 3000)
+    </script>
+    {% if messages %}
+      {% for m in messages %}
+        <p id="distag" style="color: red; text-align: center">{{m}}</p>
+      {% endfor %}
+    {% endif %}
+    <div class="container">
+      <p style="float: left;font-size: 25px;"> <a href="{% url 'back' %}" style="color: orange">< Back</a> </p></br></br></br> 
+      <p style="text-align: center; color: #0ABBB5; font-size: 40px">IV Sem</p>
+      <div align="center">
+        <form method="post">
+          {% csrf_token %}
+          <select name="subop">
+            <option value="0">Software Engineering</option>
+            <option value="1">DAA</option>
+            <option value="2">MPMC</option>
+            <option value="3">Object Oriented Concepts</option>
+            <option value="4">Data Communication</option>
+          </select>
+          <p></p>
+          <select name="modop">
+            <option value="0">mod 1</option>
+            <option value="1">mod 2</option>
+            <option value="2">mod 3</option>
+            <option value="3">mod 4</option>
+            <option value="4">mod 5</option>
+          </select></br>
+          <p id="txt">Enter Email id</p>
+          <input type="text" name="email" placeholder="Enter email id"></br>
+          <button id="subut">Mail this to me</button>
+        </form>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Software Engineering</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem4/SE/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem4/SE/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem4/SE/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem4/SE/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem4/SE/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">DAA</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem4/DAA/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem4/DAA/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem4/DAA/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem4/DAA/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem4/DAA/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">MPMC</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem4/MPMC/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem4/MPMC/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem4/MPMC/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem4/MPMC/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem4/MPMC/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Object Oriented Concepts</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem4/OOC/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem4/OOC/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem4/OOC/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem4/OOC/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem4/OOC/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Data Communication</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem4/DC/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem4/DC/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem4/DC/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem4/DC/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem4/DC/m5.pdf' %}">Module 5</a></p>
+      </div>
+    </div>
+  </body>
+</html>

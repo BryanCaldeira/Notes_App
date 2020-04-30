@@ -1,0 +1,94 @@
+.navbar{
+	box-shadow: 2px 2px 4px #0ABBB5; 
+}
+
+.navbar-toggle{
+	box-shadow: 2px 2px 8px #0ABBB5; 
+}
+
+.icon-bar{
+	background-color: #0ABBB5;
+}
+
+.navbar-brand{
+	font-size: 30px;
+}
+
+
+#brand{
+	padding-right: 100px;
+	color: white
+}
+
+body{
+	background-color: black;
+	height: 600px
+}
+
+
+.sem3{
+	width: 300px;
+	height: 100px;
+	border-radius: 10px;
+	margin:40px auto;
+	vertical-align:middle; 
+	line-height: 100px;
+	box-shadow: 4px 4px 20px #0ABBB5;
+
+}
+
+.sem4{
+	width: 300px;
+	height: 100px;
+	border-radius: 10px;
+	margin:40px auto;
+	vertical-align:middle; 
+	line-height: 100px;
+	box-shadow: 4px 4px 20px #0ABBB5;
+
+}
+
+.sem5{
+	width: 300px;
+	height: 100px;
+	border-radius: 10px;
+	margin:40px auto;
+	vertical-align:middle; 
+	line-height: 100px;
+	box-shadow: 4px 4px 20px #0ABBB5;
+
+}
+
+
+.sem6{
+	width: 300px;
+	height: 100px;
+	border-radius: 10px;
+	margin:40px auto;
+	vertical-align:middle; 
+	line-height: 100px;
+	box-shadow: 4px 4px 20px #0ABBB5;
+
+}
+
+@media(max-device-width:500px)
+{
+	.sem3{
+		width:80%;
+	}
+
+	.sem4{
+		width: 80%;
+	}
+
+	.sem5{
+		width: 80%;
+	}
+
+	.sem6{
+		width: 80%;
+	}
+
+	
+
+}

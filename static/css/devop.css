@@ -1,0 +1,52 @@
+.navbar{
+	box-shadow: 2px 2px 4px #0ABBB5; 
+}
+
+.navbar-toggle{
+	box-shadow: 2px 2px 8px #0ABBB5; 
+}
+
+.icon-bar{
+	background-color: #0ABBB5;
+}
+
+.navbar-brand{
+	font-size: 30px;
+}
+
+
+#brand{
+	padding-right: 100px;
+	color: white
+}
+
+body{
+	background-color: black;
+}
+
+
+
+
+img{
+	width:300px;
+	height: 300px;
+	border-radius: 5%;
+	box-shadow: 4px 4px 20px #0ABBB5;
+}
+
+
+@media(max-device-width: 500px)
+{
+	.container{
+		width:90%;
+	}
+
+	img{
+		width: 200px;
+		height: 200px;
+		border-radius: 100%;
+		margin: none;
+		width: 100;
+	}
+
+}

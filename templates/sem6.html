@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sem6</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/sems.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <p class="navbar-brand" id="brand">CS Notes</p>
+        </div>
+      </div>
+    </nav>
+    <script type="text/javascript">
+      setTimeout(function(){
+        if ($('#distag').length > 0) {
+             $('#distag').remove();
+            }
+        }, 3000)
+    </script>
+    {% if messages %}
+      {% for m in messages %}
+        <p id="distag" style="color: red; text-align: center">{{m}}</p>
+      {% endfor %}
+    {% endif %}
+    <div class="container">
+      <p style="float: left;font-size: 25px;"> <a href="{% url 'back' %}" style="color: orange">< Back</a> </p></br></br></br> 
+      <p style="text-align: center; color: #0ABBB5; font-size: 40px">VI Sem</p>
+      <div align="center">
+        <form method="post">
+          {% csrf_token %}
+          <select name="subop">
+            <option value="0">CNS</option>
+            <option value="1">Computer Graphics</option>
+            <option value="2">System Software</option>
+            <option value="3">Operating Systems</option>
+            <option value="4">PAP</option>
+          </select>
+          <p></p>
+          <select name="modop">
+            <option value="0">mod 1</option>
+            <option value="1">mod 2</option>
+            <option value="2">mod 3</option>
+            <option value="3">mod 4</option>
+            <option value="4">mod 5</option>
+          </select></br>
+          <p id="txt">Enter Email id</p>
+          <input type="text" name="email" placeholder="Enter email id"></br>
+          <button id="subut">Mail this to me</button>
+        </form>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">CNS</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem6/CNS/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem6/CNS/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem6/CNS/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem6/CNS/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem6/CNS/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Computer Graphics</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem6/CG/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem6/CG/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem6/CG/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem6/CG/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem6/CG/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">System Software</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem6/SS/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem6/SS/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem6/SS/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem6/SS/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem6/SS/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Operating Systems</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem6/OS/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem6/OS/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem6/OS/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem6/OS/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem6/OS/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">PAP</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem6/PY/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem6/PY/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem6/PY/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem6/PY/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem6/PY/m5.pdf' %}">Module 5</a></p>
+      </div>
+    </div>
+  </body>
+</html>

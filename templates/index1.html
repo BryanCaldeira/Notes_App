@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CsNotes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/content.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <p class="navbar-brand" id="brand">CS Notes</p>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav" id="center">
+            <li class="active"><a href="{% url 'devop' %}" style="color: #0ABBB5; font-size:25px">Developer</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="conatiner">
+      <div class="sem3" align="center"><p><a href="{% url 'sem3' %}" style="font-size: 25px; color: #0ABBB5">III sem</a></p></div>
+      <div class="sem4" align="center"><p><a href="{% url 'sem4' %}" style="font-size: 25px; color: #0ABBB5">IV sem</a></p></div>
+      <div class="sem5" align="center"><p><a href="{% url 'sem5' %}" style="font-size: 25px; color: #0ABBB5">V sem</a></p></div>
+      <div class="sem6" align="center"><p><a href="{% url 'sem6' %}" style="font-size: 25px; color: #0ABBB5">VI sem</a></p></div>  
+    </div>
+  </body>
+</html>

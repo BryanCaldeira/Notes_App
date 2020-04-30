@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sem5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/sems.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <p class="navbar-brand" id="brand">CS Notes</p>
+        </div>
+      </div>
+    </nav>
+    <script type="text/javascript">
+      setTimeout(function(){
+        if ($('#distag').length > 0) {
+             $('#distag').remove();
+            }
+        }, 3000)
+    </script>
+    {% if messages %}
+      {% for m in messages %}
+        <p id="distag" style="color: red; text-align: center">{{m}}</p>
+      {% endfor %}
+    {% endif %}
+    <div class="container">
+      <p style="float: left;font-size: 25px;"> <a href="{% url 'back' %}" style="color: orange">< Back</a> </p></br></br></br> 
+      <p style="text-align: center; color: #0ABBB5; font-size: 40px">V Sem</p>
+      <div align="center">
+        <form method="post">
+          {% csrf_token %}
+          <select name="subop">
+            <option value="0">Management & IT</option>
+            <option value="1">Computer Networks</option>
+            <option value="2">Database Management System</option>
+            <option value="3">ATC</option>
+            <option value="4">Data Communication</option>
+          </select>
+          <p></p>
+          <select name="modop">
+            <option value="0">mod 1</option>
+            <option value="1">mod 2</option>
+            <option value="2">mod 3</option>
+            <option value="3">mod 4</option>
+            <option value="4">mod 5</option>
+          </select></br>
+          <p id="txt">Enter Email id</p>
+          <input type="text" name="email" placeholder="Enter email id"></br>
+          <button id="subut">Mail this to me</button>
+        </form>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Management & IT</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem5/ME/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem5/ME/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem5/ME/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem5/ME/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem5/ME/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Computer Networks</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem5/CN/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem5/CN/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem5/CN/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem5/CN/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem5/CN/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">Database Management System</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem5/DMS/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem5/DMS/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem5/DMS/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem5/DMS/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem5/DMS/m5.pdf' %}">Module 5</a></p>
+      </div>
+      <div class="sub">
+        <p style="padding-top: 20px; text-align: center; color: orange; font-size: 40px;">ATC</p>
+        <p style="text-align: center; font-size: 25px;"><a href="{% static 'Sem5/ATC/m1.pdf' %}">Module 1</a></br>
+        <a href="{% static 'Sem5/ATC/m2.pdf' %}">Module 2</a></br>
+        <a href="{% static 'Sem5/ATC/m3.pdf' %}">Module 3</a></br>
+        <a href="{% static 'Sem5/ATC/m4.pdf' %}">Module 4</a></br>
+        <a href="{% static 'Sem5/ATC/m5.pdf' %}">Module 5</a></p>
+      </div>
+    </div>
+  </body>
+</html>

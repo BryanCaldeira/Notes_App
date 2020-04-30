@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Developer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/devop.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <p class="navbar-brand" id="brand">CS Notes</p>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" id="center">
+        <li class="active"><a href="{% url 'main' %}" style="color: #0ABBB5; font-size:25px">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container" align="center">
+  <img src="{% static 'images/devop_img.jpg' %}">
+  <p style="margin-top: 30px;margin-bottom: 20px; color: white; font-size: 20px;">Bryan Dominic Caldeira</p>
+  <p><a href="mailto: bryandominiccaldeira@yahoo.com">bryandominiccaldeira@yahoo.com</a></p>
+	
+</div>
+
+</body>
+</html>
