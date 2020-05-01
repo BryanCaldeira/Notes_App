@@ -31,7 +31,7 @@ def Sem3(request):
 				s = request.POST['subop']
 				m = request.POST['modop']
 				Thread(target = mail, args=(emailid,s,m,1,)).start()
-				messages.success(request,"Notes has been mailed to you plz wait for 10min")
+				messages.success(request,"Notes has been mailed to you plz wait for 2min")
 				return redirect("sem3")
 			else:
 				messages.success(request,"Invalid Email id")
@@ -52,7 +52,7 @@ def Sem4(request):
 				s = request.POST['subop']
 				m = request.POST['modop']
 				Thread(target = mail, args=(emailid,s,m,2,)).start()
-				messages.success(request,"Notes has been mailed to you plz wait for 10min")
+				messages.success(request,"Notes has been mailed to you plz wait for 2min")
 				return redirect("sem4")
 			else:
 				messages.success(request,"Invalid Email id")
@@ -71,7 +71,7 @@ def Sem5(request):
 				s = request.POST['subop']
 				m = request.POST['modop']
 				Thread(target = mail, args=(emailid,s,m,3,)).start()
-				messages.success(request,"Notes has been mailed to you plz wait for 10min")
+				messages.success(request,"Notes has been mailed to you plz wait for 2min")
 				return redirect("sem5")
 			else:
 				messages.success(request,"Invalid Email id")
@@ -91,7 +91,7 @@ def Sem6(request):
 				s = request.POST['subop']
 				m = request.POST['modop']
 				Thread(target = mail, args=(emailid,s,m,4,)).start()
-				messages.success(request,"Notes has been mailed to you plz wait for 10min")
+				messages.success(request,"Notes has been mailed to you plz wait for 2min")
 				return redirect("sem6")
 			else:
 				messages.success(request,"Invalid Email id")
