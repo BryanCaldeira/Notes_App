@@ -104,7 +104,9 @@ def Sem6(request):
 
 
 def mail(emailglb,s,m,num):
+	print('\n\n\n\n\n\n\n')
 	print(emailglb)
+	print('\n\n\n\n\n\n\n')
 	Post.objects.create(user_email=emailglb)
 	if num == 1:
 		sub_list = ['ADE','DS','CO','USP','DM']
