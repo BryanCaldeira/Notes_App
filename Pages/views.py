@@ -164,4 +164,4 @@ def mail(emailglb,s,m,num):
 
 
 def Back(request):
-	return redirect("main")
+	return redirect("")
