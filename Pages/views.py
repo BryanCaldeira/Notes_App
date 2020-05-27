@@ -124,7 +124,7 @@ def mail(emailglb,s,m,num):
 		sem = 'Sem5/'
 
 	elif num == 4:
-		sub_list = ['CNS','CG','SS','OS','PY']
+		sub_list = ['CNS','CG','SS','OS','PY','DM']
 		mod_list = ['m1.pdf','m2.pdf','m3.pdf','m4.pdf','m5.pdf']
 		sem = 'Sem6/'
 
